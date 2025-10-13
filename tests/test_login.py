@@ -17,7 +17,6 @@ class TestLogin:
     """
     Testes de login com diferentes tipos de usuários.
     """
-
     def _executar_login(self, driver, user_data, tipo_usuario: str):
         """Executa o fluxo completo de login e valida redirecionamento."""
         lp = LoginPage(driver)

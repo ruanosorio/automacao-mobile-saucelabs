@@ -19,7 +19,6 @@ class TestHiringProducts:
         """
         Cenário: Usuário realiza login, adiciona produto ao carrinho,
         realiza o checkout e finaliza a compra com sucesso.
-
         """
         
         # Screenshot inicial
