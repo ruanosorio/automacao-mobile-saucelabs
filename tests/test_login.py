@@ -10,7 +10,6 @@ from conftest import take_screenshot
 LOGIN_TIMEOUT = 20
 CART_LOCATOR = (AppiumBy.ACCESSIBILITY_ID, "test-Cart")
 
-
 @allure.epic("Autenticação")
 @allure.feature("Login")
 class TestLogin:
@@ -41,8 +40,6 @@ class TestLogin:
                     attachment_type=allure.attachment_type.TEXT
                 )
                 raise AssertionError(f"Falha no login do usuário {tipo_usuario}")
-
-    # ==================== TESTES ====================
 
     @allure.story("Login com usuário padrão")
     @allure.severity(allure.severity_level.CRITICAL)
