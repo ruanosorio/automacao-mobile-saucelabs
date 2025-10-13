@@ -1,0 +1,20 @@
+# Cliente oficial para comunicação com o servidor Appium
+appium-python-client>=5.0.1
+
+# Framework de testes e executor
+pytest~=8.2.0
+
+# Plugin para execução de testes em paralelo
+pytest-xdist~=3.6.1
+
+# Plugin para executar novamente os testes que falharam
+pytest-rerunfailures~=14.0
+
+# Plugin para geração de relatórios com Allure
+allure-pytest~=2.13.5
+
+# Carrega variáveis de ambiente de arquivos .env
+python-dotenv
+
+# Validação de dados e gestão de configurações
+pydantic~=2.7.1
