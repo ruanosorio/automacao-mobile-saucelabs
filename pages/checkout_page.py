@@ -1,15 +1,16 @@
 from appium.webdriver.common.appiumby import AppiumBy
+from pages.base_page import BasePage
 from utils.credentials_loader import CredentialsLoader
 from utils.helpers import scroll_to_bottom
 
-class CheckoutPage:
+class CheckoutPage(BasePage):
     """
     Page Object da tela de Checkout.
     Responsável por preencher dados do usuário e finalizar a compra.
     """
 
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.credentials_loader = CredentialsLoader()
 
         # Locators
@@ -27,10 +28,10 @@ class CheckoutPage:
             last_name (str): Último nome
             zip_code (str): Código postal
         """
-        self.driver.find_element(*self.first_name_field).send_keys(first_name)
-        self.driver.find_element(*self.last_name_field).send_keys(last_name)
-        self.driver.find_element(*self.zip_field).send_keys(zip_code)
-        self.driver.find_element(*self.continue_button).click()
+        self.send_keys(self.first_name_field, first_name)
+        self.send_keys(self.last_name_field, last_name)
+        self.send_keys(self.zip_field, zip_code)
+        self.click(self.continue_button)
 
     def fill_checkout_info_from_credentials(self, user_type: str = "standard_user"):
         """
@@ -51,4 +52,4 @@ class CheckoutPage:
         scroll_to_bottom(self.driver)
         
         # Finaliza a compra
-        self.driver.find_element(*self.finish_button).click()
+        self.click(self.finish_button)

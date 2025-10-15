@@ -15,7 +15,7 @@ from conftest import take_screenshot
 @pytest.mark.usefixtures("driver")
 class TestHiringProducts:
 
-    def test_hiring_products_sucess(self, driver):
+    def test_hiring_products_success(self, driver):
         """
         Cenário: Usuário realiza login, adiciona produto ao carrinho,
         realiza o checkout e finaliza a compra com sucesso.

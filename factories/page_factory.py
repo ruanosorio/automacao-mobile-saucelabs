@@ -1,6 +1,6 @@
 from pages.login_page import LoginPage
 from pages.home_page import HomePage
-from pages.products_page import ProductPage
+from pages.products_page import ProductsPage
 from pages.cart_page import CartPage
 from pages.checkout_page import CheckoutPage
 
@@ -15,7 +15,7 @@ class PageFactory:
         return HomePage(self.driver)
 
     def product(self):
-        return ProductPage(self.driver)
+        return ProductsPage(self.driver)
 
     def cart(self):
         return CartPage(self.driver)
